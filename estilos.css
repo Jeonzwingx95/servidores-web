@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f0ff;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #7b2cbf, #c77dff);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: #3c096c;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #9d4edd;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero,
+.content {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(60, 9, 108, 0.12);
+}
+
+/* IMAGEN PRINCIPAL DE INICIO */
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2,
+.content h2 {
+    color: #7b2cbf;
+    margin-bottom: 15px;
+}
+
+/* TARJETAS DE INICIO */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(60, 9, 108, 0.12);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #7b2cbf;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #7b2cbf;
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.card a:hover {
+    background: #9d4edd;
+}
+
+/* IMAGEN PRINCIPAL DE LAS PÁGINAS */
+
+.main-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* CAJAS DE INFORMACIÓN */
+
+.info-box,
+.protocol-card {
+    background: #f8f1ff;
+    border-left: 5px solid #9d4edd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.info-box h3,
+.protocol-card h3 {
+    color: #7b2cbf;
+    margin-bottom: 5px;
+}
+
+/* IMÁGENES DE HOSTING */
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-box img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* DIAGRAMA DNS */
+
+.diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.diagram-box {
+    background: #f8f1ff;
+    border: 2px solid #9d4edd;
+    padding: 20px;
+    min-width: 150px;
+    text-align: center;
+    border-radius: 12px;
+    color: #7b2cbf;
+}
+
+.arrow {
+    font-size: 30px;
+    color: #7b2cbf;
+    font-weight: bold;
+}
+
+/* CICLO DE VIDA */
+
+.timeline {
+    margin-top: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f1ff;
+    border-radius: 12px;
+}
+
+.step span {
+    background: #7b2cbf;
+    color: white;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: #7b2cbf;
+}
+
+/* FOOTER */
+
+footer {
+    background: #3c096c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .content {
+        padding: 25px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-box img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .diagram {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
